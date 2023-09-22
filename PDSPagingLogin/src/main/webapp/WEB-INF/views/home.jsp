@@ -27,6 +27,14 @@
    <li></li>
    <li><a href="/Pds/List?menu_id=MENU01&nowpage=1">페이징 자료실 목록</a></li>
    <li><a href="/Pds/WriteForm?menu_id=MENU01&bnum=0&lvl=0&step=0&nref=0&nowpage=1">자료실 등록</a></li>
+   
+   <li></li>
+   <li>
+      ${ sessionScope.login.username } 님 환영합니다.<br>
+      당신의 가입일은 ${ login.indate } 입니다<br>
+      <a href="/logout"> 로그아웃 </a>
+   </li>
+   
    </ul>
    </div>
 </body>

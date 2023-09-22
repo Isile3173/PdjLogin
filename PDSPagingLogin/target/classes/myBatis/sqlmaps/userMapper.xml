@@ -63,6 +63,22 @@
          AND   PASSWD   = #{ passwd }
          
    </update>
+   
+   <!-- 로그인 -->
+   <select id="GetLogin">
+   
+   SELECT  USERID,
+           PASSWD,
+           USERNAME,
+           EMAIL,
+           TO_CHAR(INDATE, 'YYYY-MM,DD HH:MI:SS) INDATE
+     FROM TUSER
+    WHERE USERID = #{userid}
+      AND PASSWD = #{ passwd}
+   
+   
+   </select>
+   
 
  
 </mapper>
