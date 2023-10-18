@@ -69,7 +69,7 @@
      <td colspan="3" style="text-align:left;padding:30px 10px; ">
    	    <c:forEach var="file"  items="${ fileList }" >
    	       <div>
-   	         <%-- <a href="<c:out value="/Pds/download/external/${ file.sfilename }" />"> --%>
+
    	         <a href="/Pds/download/external/${ file.sfilename }">
    	           ${ file.filename }
    	         </a>   	       
@@ -84,12 +84,16 @@
         href="/Pds/WriteForm?menu_id=${vo.menu_id}&bnum=0&lvl=0&step=0&nref=0&nowpage=1">새글쓰기</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="/Pds/WriteForm?menu_id=${vo.menu_id}&idx=${vo.idx}&bnum=${vo.bnum}&lvl=${vo.lvl}&step=${vo.step}&nref=${vo.nref}&nowpage=${map.nowpage}">답글쓰기</a><span></span>
+ 
+        <c:if test="${ login.username == vo.writer }"> 
+ 
      <a class="btn btn-primary btn-sm"
         href="/Pds/UpdateForm?menu_id=${vo.menu_id}&idx=${vo.idx}&nowpage=${map.nowpage}">수정</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="/Pds/Delete?menu_id=${vo.menu_id}&idx=${ vo.idx }&nowpage=${map.nowpage}">삭제</a><span></span>
      <a class="btn btn-primary btn-sm"
         href="/Pds/List?menu_id=${vo.menu_id}&nowpage=${map.nowpage}">목록으로</a><span></span>
+     </c:if>
      <a class="btn btn-primary btn-sm"
         href="javascript:history.back()">이전으로</a><span></span>
      <a class="btn btn-primary btn-sm"

@@ -24,7 +24,7 @@ public class HomeController {
 	}
 	
 	// 로그인
-	@RequestMapping("/Login")
+	@RequestMapping("/login")
 	public  String   login() {
 		return  "user/login";
 	}
@@ -44,12 +44,14 @@ public class HomeController {
 		}
 		
 		// 로그인 체크
-		UserVo    vo  =  userService.getLogin( map ):
+		UserVo    vo  =  userService.getLogin( map );
+		System.out.println( map);
+		System.out.println( vo);
 		if( vo  !=  null  ) {
 			session.setAttribute("login", vo);
 			returnURL = "redirect:/";        //  Home 으로 보낸다	
 		} else {
-			returnURL = "redirect:/Login";   //  /Login 으로 보낸다
+			returnURL = "redirect:/login";   //  /Login 으로 보낸다
 		}
 		
 		return  returnURL;
@@ -57,11 +59,11 @@ public class HomeController {
 	}
 	
 	//  로그아웃
-	@RequestMapping("/Logout")
+	@RequestMapping("/logout")
 	public  String   logout( HttpSession  session   ) {
 				
 		session.invalidate();
-		return  "redirect:/Login";
+		return  "redirect:/login";
 	}
 	
 

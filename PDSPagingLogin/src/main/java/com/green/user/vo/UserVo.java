@@ -2,60 +2,81 @@ package com.green.user.vo;
 
 public class UserVo {
 	// Fields
-	private String userid;
-	private String passwd;
-	private String username;
+	private String user_id;
+	private String pass_pwd;
+	private String user_name;
+	private String user_birth;
 	private String email;
-	private String indate;
+	private String acount_date;
 	
 	// Constructor
-	public UserVo() {}
-	public UserVo(String userid, String passwd, String username, String email, String indate) {
-		this.userid = userid;
-		this.passwd = passwd;
-		this.username = username;
+	public UserVo(String user_id, String pass_pwd, String user_name, String user_birth, String email,
+			String acount_date) {
+		super();
+		this.user_id = user_id;
+		this.pass_pwd = pass_pwd;
+		this.user_name = user_name;
+		this.user_birth = user_birth;
 		this.email = email;
-		this.indate = indate;
+		this.acount_date = acount_date;
 	}
-	
-	// Getter / Setter
-	public String getUserid() {
-		return userid;
+    
+	// Getter/Setter
+	public String getUser_id() {
+		return user_id;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
-	public String getPasswd() {
-		return passwd;
+
+	public String getPass_pwd() {
+		return pass_pwd;
 	}
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
+
+	public void setPass_pwd(String pass_pwd) {
+		this.pass_pwd = pass_pwd;
 	}
-	public String getUsername() {
-		return username;
+
+	public String getUser_name() {
+		return user_name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
+
+	public String getUser_birth() {
+		return user_birth;
+	}
+
+	public void setUser_birth(String user_birth) {
+		this.user_birth = user_birth;
+	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getIndate() {
-		return indate;
+
+	public String getAcount_date() {
+		return acount_date;
 	}
-	public void setIndate(String indate) {
-		this.indate = indate;
+
+	public void setAcount_date(String acount_date) {
+		this.acount_date = acount_date;
 	}
-	
+    
 	// toString
 	@Override
 	public String toString() {
-		return "UserVo [userid=" + userid + ", passwd=" + passwd + ", username=" + username + ", email=" + email
-				+ ", indate=" + indate + "]";
+		return "UserVo [user_id=" + user_id + ", pass_pwd=" + pass_pwd + ", user_name=" + user_name + ", user_birth="
+				+ user_birth + ", email=" + email + ", acount_date=" + acount_date + "]";
 	}
+	
 	
 	
 }

@@ -24,11 +24,11 @@
   <table>
    <tr>
      <th>아이디</th>
-     <td><input type="text" name="userid" /></td>
+     <td><input type="text" name="userid" value="noname0224" /></td>
    </tr> 
    <tr>
      <th>비밀번호</th>
-     <td><input type="password" name="passwd" id="passwd" /></td>
+     <td><input type="password" name="passwd" id="passwd" value="123123" /></td>
    </tr> 
    <tr>     
      <td colspan="2">

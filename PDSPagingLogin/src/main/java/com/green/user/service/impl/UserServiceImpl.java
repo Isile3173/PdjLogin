@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserVo getLogin(HashMap<String, Object> map) {
 		UserVo userVo = userDao.getLogin(map);
-		return null;
+		return userVo;
 	}
 	
 }
